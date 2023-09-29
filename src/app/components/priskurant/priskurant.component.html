@@ -1,0 +1,25 @@
+<kendo-grid 
+            kendoGridExpandGroupBy
+            [groupsInitiallyExpanded]="initiallyExpanded"
+            [(expandedGroupKeys)]="expandedGroupKeys"
+            [kendoGridBinding]="priskurantPoster"
+            [groupable]="false"
+            [group]="groups"
+            [sort]="sort"
+            [height]="800"
+        >
+    <kendo-grid-column field="Priskurant">
+        <ng-template kendoGridGroupHeaderTemplate let-group="group">
+            {{ group.value ? group.value.split(":")[0] : "" }}
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="PriskurantAfsnit">
+        <ng-template kendoGridGroupHeaderTemplate let-group="group">
+            {{ group.value ? group.value.split(":")[0] : "" }}
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="PostId" title="PostId"></kendo-grid-column>
+    <kendo-grid-column field="Tekst" title="Tekst"> </kendo-grid-column>
+    <kendo-grid-column field="Enhed" title="Enhed"> </kendo-grid-column>
+    <kendo-grid-column field="Listepris" title="Pris"> </kendo-grid-column>
+</kendo-grid>
