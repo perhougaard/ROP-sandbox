@@ -9,6 +9,7 @@ import { OpstillingComponent } from './components/opstilling/opstilling.componen
 import { RegnskabComponent } from './components/regnskab/regnskab.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TreeListModule } from '@progress/kendo-angular-treelist';
+import { RegnskabsummerComponent } from './components/regnskabsummer/regnskabsummer.component';
 
 
 
@@ -18,7 +19,8 @@ import { TreeListModule } from '@progress/kendo-angular-treelist';
     AppComponent,
     PriskurantComponent,
     OpstillingComponent,
-    RegnskabComponent
+    RegnskabComponent,
+    RegnskabsummerComponent
   ],
   imports: [
     BrowserModule,
