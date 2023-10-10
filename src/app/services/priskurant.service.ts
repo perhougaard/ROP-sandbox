@@ -7,9 +7,9 @@ import { IPriskurantPost } from "../models/priskurantpost.model";
   providedIn: 'root'
 })
 export class PriskurantService {
-  private priskurantPostFile = 'poster.json';
   constructor(private http: HttpClient) { }
-
+  private priskurantPostFile = 'poster.json';
+  
   getAllPriskurantPoster(): Observable<IPriskurantPost[]> {
     return this.http.get<IPriskurantPost[]>(`assets/${this.priskurantPostFile}`)
       .pipe(

@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { OpstillingComponent } from './components/opstilling/opstilling.component';
 import { RegnskabComponent } from './components/regnskab/regnskab.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TreeListModule } from '@progress/kendo-angular-treelist';
+
 
 
 
@@ -21,7 +24,9 @@ import { RegnskabComponent } from './components/regnskab/regnskab.component';
     BrowserModule,
     GridModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    TreeListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

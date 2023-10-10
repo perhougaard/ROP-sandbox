@@ -6,20 +6,26 @@
             [groupable]="false"
             [group]="groups"
             [sort]="sort"
-            [height]="800"
-        >
-    <kendo-grid-column field="Priskurant">
+            [height]="1000"
+            [size]="gridSize"
+        >       
+    <kendo-grid-column field="Priskurant" [hidden]="true">
         <ng-template kendoGridGroupHeaderTemplate let-group="group">
             {{ group.value ? group.value.split(":")[0] : "" }}
         </ng-template>
     </kendo-grid-column>
-    <kendo-grid-column field="PriskurantAfsnit">
+    <kendo-grid-column field="PriskurantAfsnit" [hidden]="true">
         <ng-template kendoGridGroupHeaderTemplate let-group="group">
             {{ group.value ? group.value.split(":")[0] : "" }}
         </ng-template>
     </kendo-grid-column>
-    <kendo-grid-column field="PostId" title="PostId"></kendo-grid-column>
+    <kendo-grid-column field="PriskurantGruppe" [hidden]="true">
+        <ng-template kendoGridGroupHeaderTemplate let-group="group">
+            {{ group.value ? group.value.split(":")[0] : "" }}
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="PostId" title="PostId" [width]="100"></kendo-grid-column>
     <kendo-grid-column field="Tekst" title="Tekst"> </kendo-grid-column>
-    <kendo-grid-column field="Enhed" title="Enhed"> </kendo-grid-column>
-    <kendo-grid-column field="Listepris" title="Pris"> </kendo-grid-column>
+    <kendo-grid-column field="Enhed" title="Enhed" [width]="60"> </kendo-grid-column>
+    <kendo-grid-column field="Listepris" title="Pris" [width]="80"> </kendo-grid-column>
 </kendo-grid>
