@@ -1,15 +1,20 @@
 <kendo-treelist
             [kendoTreeListFlatBinding]="regnskabPoster"
+            [initiallyExpanded]="true"
             kendoTreeListExpandable
             idField="Id"
             parentIdField="ParentId"
+            [rowClass]="rowCallback"
+            (cellClick)="cellClickHandler($event)"
+            (cellClose)="cellCloseHandler($event)"
         >
-    <kendo-treelist-column [expandable]="true" field="Tekst" title="Tekst" [style]="{ 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="PostId" title="Post" [width]="120" [style]="{ 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Maengde" title="Maengde" [width]="100" [style]="{'text-align': 'right', 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Faktor" title="Faktor" [width]="100" [style]="{'text-align': 'right', 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Pris" title="Pris" [width]="100" [style]="{'text-align': 'right', 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Enhed" title="Enhed" [width]="100" [style]="{ 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Linjetotal" title="Total" [width]="100" [style]="{'text-align': 'right', 'font-size': '12px'}"></kendo-treelist-column>
-    <kendo-treelist-column field="Linjenummer" title="Løbenummer" [width]="100" [style]="{'text-align': 'right', 'font-size': '12px'}"></kendo-treelist-column>
+    <kendo-treelist-column [expandable]="true" field="Tekst" title="Tekst"></kendo-treelist-column>
+    <kendo-treelist-column field="PostId" title="Post" [width]="130"></kendo-treelist-column>
+    <kendo-treelist-column field="Maengde" title="Maengde" [width]="100" [style]="{'text-align': 'right'}"></kendo-treelist-column>
+    <kendo-treelist-column field="Faktor" title="Faktor" [width]="100" [style]="{'text-align': 'right'}"></kendo-treelist-column>
+    <kendo-treelist-column field="Pris" title="Pris" format="n2" [width]="100" [style]="{'text-align': 'right'}"></kendo-treelist-column>
+    <kendo-treelist-column field="Enhed" title="Enhed" [width]="100"></kendo-treelist-column>
+    <kendo-treelist-column field="Linjetotal" title="Total" format="n2" [width]="100" [style]="{'text-align': 'right'}"></kendo-treelist-column>
+    <kendo-treelist-column field="Linjenummer" title="Id" [width]="40" [style]="{'text-align': 'right'}"></kendo-treelist-column>
+    <kendo-treelist-column field="Funktion" title="" [hidden]="true"></kendo-treelist-column> 
 </kendo-treelist>

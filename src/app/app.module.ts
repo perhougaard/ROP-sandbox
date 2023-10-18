@@ -5,11 +5,13 @@ import { PriskurantComponent } from './components/priskurant/priskurant.componen
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { OpstillingComponent } from './components/opstilling/opstilling.component';
 import { RegnskabComponent } from './components/regnskab/regnskab.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TreeListModule } from '@progress/kendo-angular-treelist';
 import { RegnskabsummerComponent } from './components/regnskabsummer/regnskabsummer.component';
+import { RouterModule } from '@angular/router';
+import { OpstillingComponent } from './components/opstilling/opstilling.component';
+import { LayoutModule } from '@progress/kendo-angular-layout';
 
 
 
@@ -20,7 +22,8 @@ import { RegnskabsummerComponent } from './components/regnskabsummer/regnskabsum
     PriskurantComponent,
     OpstillingComponent,
     RegnskabComponent,
-    RegnskabsummerComponent
+    RegnskabsummerComponent,
+    OpstillingComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,12 @@ import { RegnskabsummerComponent } from './components/regnskabsummer/regnskabsum
     BrowserAnimationsModule,
     HttpClientModule,
     NgbModule,
-    TreeListModule
+    TreeListModule,
+    LayoutModule,
+    RouterModule.forRoot([
+      {path: '', component: OpstillingComponent},
+      {path: 'opstilling', component: OpstillingComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

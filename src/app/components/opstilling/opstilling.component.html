@@ -1,8 +1,8 @@
-    <div class="row">
-        <div class="col-4">
-            <app-priskurant></app-priskurant>
-        </div>
-        <div class="col-8">
-            <app-regnskab></app-regnskab>
-        </div>
-    </div>
+<kendo-splitter>
+    <kendo-splitter-pane [collapsible]="true" size="30%">
+        <app-priskurant></app-priskurant>
+    </kendo-splitter-pane>
+    <kendo-splitter-pane>
+        <app-regnskab></app-regnskab>
+    </kendo-splitter-pane>
+</kendo-splitter>
