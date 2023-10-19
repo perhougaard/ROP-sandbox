@@ -43,7 +43,9 @@ export class RegnskabComponent implements OnInit {
   };
 
   public cellClickHandler({ sender, columnIndex, dataItem, isEdited }: CellClickEvent): void {
+    if (!isEdited && dataItem.Funktion != "afsnit") {
         sender.editCell(dataItem, columnIndex, this.createFormGroup(dataItem));
+    }
   }
 
   public cellCloseHandler(e: CellCloseEvent): void {
